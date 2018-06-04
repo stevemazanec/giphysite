@@ -1,0 +1,14 @@
+#sportsButtons {
+    margin: 10px;
+}
+.sport {
+    margin: 10px;
+}
+#sportsForm {
+    margin: 10px;
+}
+.item {
+    float:left;
+    margin: 10px;
+    align-self: auto;
+}
