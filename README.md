@@ -1,1 +1,1 @@
-# giphysite
+A website where you can see 10 gifs of any sport by clicking on the button for that sport. The gifs will load as still images, and can be turned on/off by clicking on their respective images. More sports can also be added to the site by using the add button option on the side of the screen.
