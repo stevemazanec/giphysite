@@ -35,19 +35,21 @@ function displayGIFS() {
         url: queryURL,
         method: "GET"
     }).then(function (data) {
-        
+
         var arrayGIFS = [data.data[0], data.data[1], data.data[2], data.data[3], data.data[4], data.data[5], data.data[6], data.data[7], data.data[8], data.data[9],];
+        console.log(arrayGIFS);
         for (var j = 0; j < arrayGIFS.length; j++) {
-            if (arrayGIFS[j].rating !== "r" && arrayGIFS[j].rating !== "pg-13"){
-            var gifDiv = $("<div class='item'>");
-            var image = "<img class='GIF' src =" + arrayGIFS[j].images.fixed_width_still.url + " alt='Sports Image' data-still=" + arrayGIFS[j].images.fixed_width_still.url + " " + "data-animate=" + arrayGIFS[j].images.fixed_width.url + " " + "data-state=still>";
-            var rating = "<p class='GIFtitle'> Rated: " + arrayGIFS[j].rating + "</p>"
-            gifDiv.append(image);
-            gifDiv.append(rating);
-            $("#sports").append(gifDiv);
+            if (arrayGIFS[j].rating !== "r" && arrayGIFS[j].rating !== "pg-13") {
+                var gifDiv = $("<div class='item'>");
+                var image = "<img class='GIF' src =" + arrayGIFS[j].images.fixed_width_still.url + " alt='Sports Image' data-still=" + arrayGIFS[j].images.fixed_width_still.url + " " + "data-animate=" + arrayGIFS[j].images.fixed_width.url + " " + "data-state=still>";
+                var rating = "<p class='GIFtitle'> Rated: " + arrayGIFS[j].rating + "</p>"
+                gifDiv.append(image);
+                gifDiv.append(rating);
+                $("#sports").append(gifDiv);
+            }
+
         }
         animateGIF();
-    }
     });
 }
 
@@ -68,4 +70,3 @@ function animateGIF() {
 
 
 
-   
